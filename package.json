@@ -12,5 +12,9 @@
     "morgan": "^1.7.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
+  },
+  "devDependencies": {
+    "pure-css": "^1.0.4",
+    "react-css-modules":"*"
   }
 }

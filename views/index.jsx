@@ -1,5 +1,6 @@
 var React = require('react');
 var Layout = require('./layout');
+// var Pure = require('./pure');
 
 // Contrived example to show how one might use Flow type annotations
 function countTo(n:number):string {
@@ -13,6 +14,7 @@ function countTo(n:number):string {
 class Index extends React.Component {
   render() {
     return (
+       
       <Layout title={this.props.title}>
         <h1>{this.props.title}</h1>
         <p>Welcome to {this.props.title}</p>
@@ -21,6 +23,7 @@ class Index extends React.Component {
           I can count to 10:
           {countTo(10)}
         </p>
+
       </Layout>
     );
   }
