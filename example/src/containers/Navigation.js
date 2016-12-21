@@ -1,13 +1,13 @@
-import React, { Component, PropTypes } from 'react'
+import React, {Component, PropTypes} from 'react'
 import CSSModules from 'react-css-modules'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { actions } from 'redux-router5'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {actions} from 'redux-router5'
 
-import { menus } from 'pure-css'
+import {menus} from 'pure-css'
 import sideCss from '../components/Menus/sideMenu.css';
 let styles = {}
-Object.assign(styles, menus,sideCss)
+Object.assign(styles, menus, sideCss)
 
 class Nav extends Component {
     constructor(props, context) {
@@ -16,7 +16,7 @@ class Nav extends Component {
     }
 
     render() {
-        const { navigateTo, route } = this.props
+        const {navigateTo, route} = this.props
 
         return (
             <nav styleName="menu">
@@ -40,7 +40,7 @@ class Nav extends Component {
                             <a onClick={ () => navigateTo('tables') } styleName="pure-menu-link">Tables</a>
                         </li>
                     </ul>
-                </div>                
+                </div>
             </nav>
         );
     }
@@ -52,5 +52,5 @@ Nav.contextTypes = {
 
 export default connect(
     state => state.router.route,
-    dispatch => bindActionCreators({ navigateTo: actions.navigateTo }, dispatch)
-)( CSSModules(Nav, styles, {allowMultiple: true} ) );
+    dispatch => bindActionCreators({navigateTo: actions.navigateTo}, dispatch)
+)(CSSModules(Nav, styles, {allowMultiple: true}));

@@ -14,6 +14,8 @@ function App(props) {
     return (
 
         <div className={layoutCss.layout}>
+            <a href="#menu" className={layoutCss.menuLink}>
+            </a>
             <Navigation />
 
             <main className={layoutCss.main}>

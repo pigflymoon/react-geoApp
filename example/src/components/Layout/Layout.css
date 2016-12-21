@@ -12,7 +12,7 @@ Add transition to containers so they can push in and out.
 */
 .layout,
 .menu,
-.menu-link {
+.menuLink {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -27,14 +27,64 @@ This is the parent `<div>` that contains the menu and the content area.
     position: relative;
     padding-left: 0;
 }
+
 .layout.active .menu {
     left: 150px;
     width: 150px;
 }
 
-.layout.active .menu-link {
+.layout.active .menuLink {
     left: 150px;
 }
+
+/*
+`.menuLink` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menuLink {
+    position: fixed;
+    display: block; /* show this only on small screens */
+    top: 0;
+    left: 0; /* ".menu width" */
+    background: #000;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+    text-decoration: none;
+}
+
+.menuLink:hover,
+.menuLink:focus {
+    background: #000;
+}
+
+.menuLink span {
+    position: relative;
+    display: block;
+}
+
+.menuLink span,
+.menuLink span:before,
+.menuLink span:after {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2em;
+}
+
+.menuLink span:before,
+.menuLink span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
+
+.menuLink span:after {
+    margin-top: 0.6em;
+}
+
 /*
 The content `<div>` is where all your content goes.
 */
@@ -53,11 +103,13 @@ The content `<div>` is where all your content goes.
     padding: 2.5em 2em 0;
     border-bottom: 1px solid #eee;
 }
+
 .header h1 {
     margin: 0.2em 0;
     font-size: 3em;
     font-weight: 300;
 }
+
 .header h2 {
     font-weight: 300;
     color: #ccc;
@@ -83,17 +135,18 @@ The content `<div>` is where all your content goes.
         padding-left: 150px; /* left col width ".menu" */
         left: 0;
     }
+
     .menu {
         left: 150px;
     }
 
-    .menu-link {
+    .menuLink {
         position: fixed;
         left: 150px;
         display: none;
     }
 
-    .layout.active .menu-link {
+    .layout.active .menuLink {
         left: 150px;
     }
 }
