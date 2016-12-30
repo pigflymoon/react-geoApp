@@ -1,12 +1,12 @@
 {
   "name": "pure-css-example",
   "version": "1.0.0",
-  "description": "an example of using pure-css with css modules",
+  "description": "geo App",
   "scripts": {
     "start": "npm run start:dev",
     "start:dev": "node serverDev.js"
   },
-  "author": "Steven Iseki <stevenisekimartin@gmail.com>",
+  "author": "lucy",
   "license": "MIT",
   "homepage": "https://github.com/StevenIseki/pure-css",
   "devDependencies": {
