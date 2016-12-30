@@ -18,7 +18,7 @@ class Snippet extends Component {
         {
           this.props.files.map(file => (
             <div key={file.name} styleName='file'>
-              <div styleName='fileName'>{ file.name }</div>
+              <div styleName='fileName'>file name : { file.name }</div>
               <pre styleName='pre'>{ file.source }</pre>
             </div>
           ))

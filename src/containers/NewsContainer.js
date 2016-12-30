@@ -1,29 +1,29 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
 import { connect } from 'react-redux';
-import Buttons from '../components/Buttons/Buttons'
+import News from '../components/News/News'
 
 import Snippet from '../components/Snippet/Snippet'
 
 import js from '!!raw!../components/Buttons/Buttons';
 import css from '!!raw!../components/Buttons/Buttons.css';
 
-function News(props) {
+function NewsContainer(props) {
 
     const { route } = props;
 
     const files = [
-        { name: './Buttons.js', source: js },
-        { name: './Buttons.css', source: css }
+        { name: './News.js', source: js },
+        { name: './News.css', source: css }
     ];
 
     return (
         <div>
             <Snippet files={files}>
-                <Buttons />
+                <News />
             </Snippet>
         </div>
     );
 }
 
-export default connect()(News)
+export default connect()(NewsContainer)
