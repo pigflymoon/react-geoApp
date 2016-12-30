@@ -8,6 +8,9 @@ import ButtonsDemo from './ButtonsDemo';
 import MenusDemo from './MenusDemo';
 import FormsDemo from './FormsDemo';
 import TablesDemo from './TablesDemo';
+import News from './News';
+import Intro from './Intro';
+
 import NotFound from '../components/NotFound';
 
 import sideCss from '../components/Menus/sideMenu.css';
@@ -15,6 +18,8 @@ let styles = {};
 Object.assign(styles, sideCss);
 
 const components = {
+    'intro': Intro,
+    'news': News,
     'buttons': ButtonsDemo,
     'grids': GridsDemo,
     'menus': MenusDemo,

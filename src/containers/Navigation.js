@@ -7,7 +7,7 @@ import {actions} from 'redux-router5'
 import {menus} from 'pure-css'
 import sideCss from '../components/Menus/sideMenu.css';
 let styles = {}
-Object.assign(styles, menus, sideCss)
+Object.assign(styles, menus, sideCss);
 
 class Nav extends Component {
     constructor(props, context) {
@@ -25,7 +25,10 @@ class Nav extends Component {
 
                     <ul styleName="pure-menu-list">
                         <li styleName="pure-menu-item">
-                            <a onClick={ () => navigateTo('news') } styleName="pure-menu-link">news</a>
+                            <a onClick={ () => navigateTo('intro') } styleName="pure-menu-link">Intro</a>
+                        </li>
+                        <li styleName="pure-menu-item">
+                            <a onClick={ () => navigateTo('news') } styleName="pure-menu-link">News</a>
                         </li>
                         <li styleName="pure-menu-item">
                             <a onClick={ () => navigateTo('buttons') } styleName="pure-menu-link">Buttons</a>
