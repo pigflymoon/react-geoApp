@@ -69,6 +69,7 @@ This styles a link within a selected menu item `<li>`.
 This styles the menu heading.
 */
 .menu .pure-menu-heading {
+    padding-top: 20px;
     text-decoration: none;
     font-size: 110%;
     color: #fff;
